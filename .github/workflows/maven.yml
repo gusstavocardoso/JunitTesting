@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-
+    name: Build Project
     runs-on: ubuntu-latest
 
     steps:
@@ -21,5 +21,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Unit Tests
+      
+  test: 
+    name: Unit Tests 
+    runs-on: build
+    steps:
+    - name: Run Tests
       run: mvn test
