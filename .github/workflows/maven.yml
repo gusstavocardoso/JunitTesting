@@ -24,8 +24,8 @@ jobs:
       
   test: 
     name: Unit Tests 
-    needs: [build]
     runs-on: ubuntu-latest
+    needs: [build]
     
     steps:
     - uses: actions/checkout@v3
