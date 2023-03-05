@@ -26,6 +26,8 @@ jobs:
     name: Unit Tests 
     needs: [build]
     runs-on: ubuntu-latest
+    
     steps:
+    - uses: actions/checkout@v3
     - name: Run Tests
       run: mvn test
