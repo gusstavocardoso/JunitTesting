@@ -33,7 +33,7 @@ jobs:
       run: mvn test
 
   code_coverage:
-    name: Build and analyze
+    name: Analyze
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
